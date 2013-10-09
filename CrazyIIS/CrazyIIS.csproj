@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A869132-8969-4D6C-A652-B90BEE737F5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrazyIIS</RootNamespace>
+    <AssemblyName>CrazyIIS</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationIcon>crazyiis.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/CrazyIIS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.9.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IISMbLib, Version=1.1.1244.27862, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dlgSelectMonitorFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSelectMonitorFields.Designer.cs">
+      <DependentUpon>dlgSelectMonitorFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgSelectWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSelectWeb.Designer.cs">
+      <DependentUpon>dlgSelectWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsForms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBack.Designer.cs">
+      <DependentUpon>frmBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogAnalyzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogAnalyzer.Designer.cs">
+      <DependentUpon>frmLogAnalyzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogTimelyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogTimelyView.Designer.cs">
+      <DependentUpon>frmLogTimelyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPathACL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPathACL.Designer.cs">
+      <DependentUpon>frmPathACL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcess.Designer.cs">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReg.Designer.cs">
+      <DependentUpon>frmReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRestore.Designer.cs">
+      <DependentUpon>frmRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comm.cs">
+    </Compile>
+    <Compile Include="frmCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreate.Designer.cs">
+      <DependentUpon>frmCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHostsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHostsAdmin.Designer.cs">
+      <DependentUpon>frmHostsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigs.Designer.cs">
+      <DependentUpon>frmConfigs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWebIpWhois.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWebIpWhois.Designer.cs">
+      <DependentUpon>frmWebIpWhois.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWebSites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWebSites.Designer.cs">
+      <DependentUpon>frmWebSites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IIS.cs" />
+    <Compile Include="frmMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitor.Designer.cs">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalWeb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalWeb.Designer.cs">
+      <DependentUpon>LocalWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NTFS.cs" />
+    <Compile Include="WinNT.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dlgSelectMonitorFields.resx">
+      <DependentUpon>dlgSelectMonitorFields.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgSelectWeb.resx">
+      <DependentUpon>dlgSelectWeb.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBack.resx">
+      <DependentUpon>frmBack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHostsAdmin.resx">
+      <DependentUpon>frmHostsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogAnalyzer.resx">
+      <DependentUpon>frmLogAnalyzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogTimelyView.resx">
+      <DependentUpon>frmLogTimelyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPathACL.resx">
+      <DependentUpon>frmPathACL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcess.resx">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReg.resx">
+      <DependentUpon>frmReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRestore.resx">
+      <DependentUpon>frmRestore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreate.resx">
+      <DependentUpon>frmCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigs.resx">
+      <DependentUpon>frmConfigs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonitor.resx">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWebIpWhois.resx">
+      <DependentUpon>frmWebIpWhois.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWebSites.resx">
+      <DependentUpon>frmWebSites.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalWeb.resx">
+      <DependentUpon>LocalWeb.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="WinNTAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="crazyiis.ico" />
+    <Content Include="DLL\IISMbLib.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
